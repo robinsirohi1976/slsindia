@@ -1,1 +1,203 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body & Fonts */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #2e8b57;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom right, #e8f5e9, #ffffff);
+}
+
+.hero-image {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+/* About Section */
+.about-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Products Grid */
+.products-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.product-card img {
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.contact-section h2 {
+  text-align: center;
+  color: #2e8b57;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #256f47;
+}
+
+.g-recaptcha {
+  margin-top: 10px;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-group span {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+/* Thank You Page */
+.thankyou-container {
+  text-align: center;
+  margin: 80px 20px;
+}
+
+.thankyou-container img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.thankyou-container h1 {
+  font-size: 36px;
+  color: #2e8b57;
+}
+
+.thankyou-container p {
+  font-size: 20px;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: #2e8b57;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 
