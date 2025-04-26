@@ -1,1 +1,162 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #fcf8e8; /* Lemon yellowish background */
+  color: #333;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 50%, #a1c4fd 100%);
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 42px;
+  color: #333;
+}
+
+/* Navigation Bar */
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #2e8b57;
+}
+
+/* Contact, About, Products Section Common */
+.section {
+  max-width: 1000px;
+  margin: 50px auto;
+  background: white;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 18px;
+  width: 100%;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #256f47;
+}
+
+/* Button Section */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.button-group span {
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+/* reCAPTCHA Alignment */
+.g-recaptcha {
+  margin-top: 10px;
+}
+
+/* Thank You Page */
+.thankyou-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.thankyou-container img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.thankyou-container h1 {
+  color: #2e8b57;
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.thankyou-container p {
+  font-size: 22px;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, #a1c4fd 0%, #fcb69f 100%);
+  color: #333;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+  font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 32px;
+  }
+
+  nav a {
+    font-size: 18px;
+    margin: 0 10px;
+  }
+
+  .section {
+    padding: 30px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+  }
+}
+
 
