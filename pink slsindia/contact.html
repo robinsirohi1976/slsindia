@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Smart Living</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="assets/logo.png" alt="Smart Living Logo" height="40">
+  </div>
+  <nav>
+    <a href="index.html">Home</a></li>
+    <a href="about.html">About</a></li>
+    <a href="products.html">Products</a></li>
+    <a href="contact.html" class="active">Contact</a></li>
+    </nav>
+</header>
+
+<section class="contact-section" style="display: flex; align-items: center; justify-content: center; min-height: 50vh; gap: 100px; padding: 40px; box-sizing: border-box;">
+  
+  <div class="image-side" style="flex: 1; text-align: center;">
+    <img src="assets/handshaking.png" alt="Handshake" style="width: 94%; max-width: 800px;">
+  </div>
+
+  <div class="form-side" style="flex: 1;">
+    <form class="contact-form" id="contactForm">
+      <h2>Contact Us</h2>
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <input type="text" name="Phone" placeholder="Your Phone Number" required>
+      <textarea name="Message" placeholder="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Thank You Popup -->
+    <div id="thankYouPopup" style="display:none;">
+      <h2>Thank You! 🙏</h2>
+      <p>Redirecting to Home Page...</p>
+    </div>
+  </div>
+
+</section>
+
+
+<footer>
+  <p>© 2025 Smart Living. All rights reserved.</p>
+</footer>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const thankYouPopup = document.getElementById('thankYouPopup');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    fetch('https://script.google.com/macros/s/AKfycbyHoKqdhVusjiH_ePO4lFIjx41QWAD4-rlmqGYvTIlT3ZcA4XOL9CkZ4UmS-Yo8R535/exec', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        form.style.display = 'none';
+        thankYouPopup.style.display = 'block';
+        setTimeout(() => {
+          window.location.href = 'index.html'; // Redirect to Home page
+        }, 5000); // 5 sec
+      } else {
+        alert('Form submission failed. Please try again.');
+      }
+    })
+    .catch(error => {
+      alert('Error submitting form. Please try again.');
+      console.error(error);
+    });
+  });
+</script>
+
+</body>
+</html>
